@@ -37,19 +37,22 @@ a:hover {
 
 .w-header {
 
+    
     position: relative;
     z-index: 50;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    box-align: center; 
+    box-align: center;
     -ms-flex-align: center;
+    -webkit-box-align: center;
     align-items: center;
-    padding: 15px 15px;
+    padding: 10px 15px;
     border-bottom: 3px solid #464646;
     background-color: #131313;
     color: #fff;
-        
+    height: 10vh;
+    
     .logo {
 
         img {
@@ -63,14 +66,14 @@ a:hover {
 .main-contetn {
     display: flex;
     justify-content: start;
-    clear: both;
+    // clear: both;
     .left-body {
         
         // position: fixed;
         // flex: 0 0 230px;
         background-color: #3c434a;
         // margin-bottom: -1px;
-        width: 300px;
+        width: 20%;
         height: 90vh;
         top: 55px;
         left: 0;
@@ -94,25 +97,55 @@ a:hover {
                         padding: 15px 15px;
                         border-bottom: 1px solid rgba(255,255,255,.05);
                         display: block;
+                        position: relative;
 
                         i {
 
                             margin-right: 3px;
                         }
                     }
+                    
+                    a.d-item::before {
+                        content: "\f078";
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900;
+
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        margin-top: -8px;
+                        color: rgba(255,255,255,.2);
+                        font-size: 16px;
+                        line-height: 16px;
+                        display: block;
+                    }
+
                     ul {
 
                         li {
 
                             a {
+                                
                                 color: rgb(223, 85, 85);
                                 font-size: 13px;
                                 line-height: 1.4em;
                                 padding: 15px 15px;
                                 border-bottom: 1px solid rgba(255,255,255,.05);
                                 display: block;
-
+                                margin-left: 10px;
+                                
                             }
+                            a::before {
+                                content: "";
+                                
+                            }
+                        }
+                    }
+
+                    ul {
+
+                        .dropdwon {
+                            height: 0;
                         }
                     }
 
@@ -124,8 +157,10 @@ a:hover {
 
     .contetnt-body {
         padding-left: 15px;
+        width: auto;
 
-        .tab-pan {
+        .tab-pen {
+            display: none;            
             
             h3 {
                 text-align: center;

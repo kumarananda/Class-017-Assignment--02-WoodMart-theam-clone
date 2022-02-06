@@ -42,11 +42,12 @@ a:hover {
   box-align: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
-          align-items: center;
-  padding: 15px 15px;
+  align-items: center;
+  padding: 10px 15px;
   border-bottom: 3px solid #464646;
   background-color: #131313;
   color: #fff;
+  height: 10vh;
 }
 
 .w-header .logo img {
@@ -62,12 +63,11 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  clear: both;
 }
 
 .main-contetn .left-body {
   background-color: #3c434a;
-  width: 300px;
+  width: 20%;
   height: 90vh;
   top: 55px;
   left: 0;
@@ -86,10 +86,25 @@ a:hover {
   padding: 15px 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: block;
+  position: relative;
 }
 
 .main-contetn .left-body .left-body-menu ul li a i {
   margin-right: 3px;
+}
+
+.main-contetn .left-body .left-body-menu ul li a.d-item::before {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -8px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
 }
 
 .main-contetn .left-body .left-body-menu ul li ul li a {
@@ -99,17 +114,31 @@ a:hover {
   padding: 15px 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: block;
+  margin-left: 10px;
+}
+
+.main-contetn .left-body .left-body-menu ul li ul li a::before {
+  content: "";
+}
+
+.main-contetn .left-body .left-body-menu ul li ul .dropdwon {
+  height: 0;
 }
 
 .main-contetn .contetnt-body {
   padding-left: 15px;
+  width: auto;
 }
 
-.main-contetn .contetnt-body .tab-pan h3 {
+.main-contetn .contetnt-body .tab-pen {
+  display: none;
+}
+
+.main-contetn .contetnt-body .tab-pen h3 {
   text-align: center;
 }
 
-.main-contetn .contetnt-body .tab-pan p {
+.main-contetn .contetnt-body .tab-pen p {
   color: #000;
 }
 /*# sourceMappingURL=style.css.map */
