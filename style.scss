@@ -38,20 +38,24 @@ a:hover {
 .w-header {
 
     
-    position: relative;
+    position: sticky;
+    width: 100%;
     z-index: 50;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    box-align: center;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // // display: flex;
+    // box-align: center;
+    // -ms-flex-align: center;
+    // -webkit-box-align: center;
     align-items: center;
     padding: 10px 15px;
     border-bottom: 3px solid #464646;
     background-color: #131313;
     color: #fff;
     height: 10vh;
+    clear: both;
+    top: 0;
+
     
     .logo {
 
@@ -73,7 +77,9 @@ a:hover {
         // flex: 0 0 230px;
         background-color: #3c434a;
         // margin-bottom: -1px;
-        width: 20%;
+        min-width: 240px;
+        max-width: 250px;
+
         height: 90vh;
         top: 55px;
         left: 0;
@@ -104,8 +110,8 @@ a:hover {
                             margin-right: 3px;
                         }
                     }
-                    
-                    a.d-item::before {
+
+                    a.dd-item::before {
                         content: "\f078";
                         font-family: "Font Awesome 5 Free"; 
                         font-weight: 900;
@@ -142,12 +148,13 @@ a:hover {
                         }
                     }
 
-                    ul {
-
-                        .dropdwon {
-                            height: 0;
-                        }
+                    .dropdwon {
+                        height: ;
+                        overflow: hidden;
                     }
+                    // .dropdwon.active {
+                    //     height: fit-content;
+                    // }
 
                 }
             }
@@ -160,7 +167,8 @@ a:hover {
         width: auto;
 
         .tab-pen {
-            display: none;            
+            display: none;   
+            margin-top: 20px;         
             
             h3 {
                 text-align: center;
@@ -168,6 +176,9 @@ a:hover {
             p {
                 color: #000;
             }
+        }
+        .tab-pen.active{
+            display: inline-block;
         }
     }
 

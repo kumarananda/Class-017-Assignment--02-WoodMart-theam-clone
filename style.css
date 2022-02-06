@@ -34,20 +34,20 @@ a:hover {
 }
 
 .w-header {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
   z-index: 50;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  box-align: center;
-  -ms-flex-align: center;
   -webkit-box-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 15px;
   border-bottom: 3px solid #464646;
   background-color: #131313;
   color: #fff;
   height: 10vh;
+  clear: both;
+  top: 0;
 }
 
 .w-header .logo img {
@@ -67,7 +67,8 @@ a:hover {
 
 .main-contetn .left-body {
   background-color: #3c434a;
-  width: 20%;
+  min-width: 240px;
+  max-width: 250px;
   height: 90vh;
   top: 55px;
   left: 0;
@@ -93,7 +94,7 @@ a:hover {
   margin-right: 3px;
 }
 
-.main-contetn .left-body .left-body-menu ul li a.d-item::before {
+.main-contetn .left-body .left-body-menu ul li a.dd-item::before {
   content: "\f078";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -121,8 +122,15 @@ a:hover {
   content: "";
 }
 
-.main-contetn .left-body .left-body-menu ul li ul .dropdwon {
-  height: 0;
+.main-contetn .left-body .left-body-menu ul li .dropdwon {
+  height: auto;
+  overflow: hidden;
+}
+
+.main-contetn .left-body .left-body-menu ul li .dropdwon.active {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .main-contetn .contetnt-body {
@@ -132,6 +140,7 @@ a:hover {
 
 .main-contetn .contetnt-body .tab-pen {
   display: none;
+  margin-top: 20px;
 }
 
 .main-contetn .contetnt-body .tab-pen h3 {
@@ -140,5 +149,9 @@ a:hover {
 
 .main-contetn .contetnt-body .tab-pen p {
   color: #000;
+}
+
+.main-contetn .contetnt-body .tab-pen.active {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */
