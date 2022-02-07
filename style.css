@@ -34,8 +34,7 @@ a:hover {
 }
 
 .w-header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   width: 100%;
   z-index: 50;
   -webkit-box-align: center;
@@ -63,6 +62,8 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  position: relative;
+  top: 72px;
 }
 
 .main-contetn .left-body {
@@ -72,7 +73,7 @@ a:hover {
   height: 90vh;
   top: 55px;
   left: 0;
-  overflow: scroll;
+  overflow-y: scroll;
   clear: both;
 }
 
@@ -88,10 +89,15 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .main-contetn .left-body .left-body-menu ul li a i {
   margin-right: 3px;
+}
+
+.main-contetn .left-body .left-body-menu ul li a.active {
+  background-color: #171a1d;
 }
 
 .main-contetn .left-body .left-body-menu ul li a.dd-item::before {
@@ -108,6 +114,10 @@ a:hover {
   display: block;
 }
 
+.main-contetn .left-body .left-body-menu ul li a.dd-item.active::before {
+  content: '\f077';
+}
+
 .main-contetn .left-body .left-body-menu ul li ul li a {
   color: #df5555;
   font-size: 13px;
@@ -116,6 +126,11 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: block;
   margin-left: 10px;
+  overflow: hidden;
+}
+
+.main-contetn .left-body .left-body-menu ul li ul li a.active {
+  background-color: #171a1d;
 }
 
 .main-contetn .left-body .left-body-menu ul li ul li a::before {
@@ -123,7 +138,7 @@ a:hover {
 }
 
 .main-contetn .left-body .left-body-menu ul li .dropdwon {
-  height: auto;
+  height: 0;
   overflow: hidden;
 }
 
@@ -151,7 +166,7 @@ a:hover {
   color: #000;
 }
 
-.main-contetn .contetnt-body .tab-pen.active {
+.main-contetn .contetnt-body .tab-pen.activeFP {
   display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

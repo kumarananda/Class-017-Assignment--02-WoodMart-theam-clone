@@ -38,7 +38,7 @@ a:hover {
 .w-header {
 
     
-    position: sticky;
+    position: fixed;
     width: 100%;
     z-index: 50;
     // display: -webkit-box;
@@ -70,6 +70,8 @@ a:hover {
 .main-contetn {
     display: flex;
     justify-content: start;
+    position: relative;
+    top: 72px;
     // clear: both;
     .left-body {
         
@@ -83,7 +85,7 @@ a:hover {
         height: 90vh;
         top: 55px;
         left: 0;
-        overflow: scroll;
+        overflow-y: scroll;
         clear: both;
         
 
@@ -104,11 +106,15 @@ a:hover {
                         border-bottom: 1px solid rgba(255,255,255,.05);
                         display: block;
                         position: relative;
+                        overflow: hidden;
 
                         i {
 
                             margin-right: 3px;
                         }
+                    }
+                    a.active {
+                        background-color: #171a1d;
                     }
 
                     a.dd-item::before {
@@ -124,6 +130,13 @@ a:hover {
                         font-size: 16px;
                         line-height: 16px;
                         display: block;
+
+                    }
+                    a.dd-item.active::before {
+                        content: '\f077';
+                    }
+                    .m-item. {
+                        color: inherit;
                     }
 
                     ul {
@@ -139,7 +152,11 @@ a:hover {
                                 border-bottom: 1px solid rgba(255,255,255,.05);
                                 display: block;
                                 margin-left: 10px;
+                                overflow: hidden;
                                 
+                            }
+                            a.active {
+                                background-color: #171a1d;
                             }
                             a::before {
                                 content: "";
@@ -149,12 +166,12 @@ a:hover {
                     }
 
                     .dropdwon {
-                        height: ;
+                        height: 0;
                         overflow: hidden;
                     }
-                    // .dropdwon.active {
-                    //     height: fit-content;
-                    // }
+                    .dropdwon.active {
+                        height: fit-content;
+                    }
 
                 }
             }
@@ -177,7 +194,7 @@ a:hover {
                 color: #000;
             }
         }
-        .tab-pen.active{
+        .tab-pen.activeFP{
             display: inline-block;
         }
     }

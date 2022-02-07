@@ -2,6 +2,30 @@
 
 const tabManu = document.querySelectorAll('.left-body-menu ul li a.m-item');
 const tabManuAll = document.querySelectorAll('.left-body-menu ul li a');
+const Allpane = document.querySelectorAll('.main-contetn .contetnt-body .tab-pen');
+
+
+
+tabManuAll.forEach(item => {
+    
+    item.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        
+
+        Allpane.forEach(item => {
+            item.classList.remove('activeFP')
+        });
+
+
+        const pane = document.querySelector(this.getAttribute('href'));
+        pane.classList.add('activeFP')
+        
+    });
+
+
+});
+
 
 
 tabManu.forEach(item => {
@@ -23,26 +47,17 @@ tabManu.forEach(item => {
         }
 
     })
-})
-
-// tabManuAll.forEach(item => {
-    
-//     item.addEventListener('click', function (e) {
-//         e.preventDefault(); 
-
-
-
-
-//     });
-
-
-// })
+});
 
 
 
 
 
 
-console.log(tabManu);
-console.log(tabManuAll);
+
+
+
+
+// console.log(tabManu);
+// console.log(tabManuAll);
 //e.nextElementSibling.style.height = 0;
