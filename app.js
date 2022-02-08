@@ -14,12 +14,23 @@ tabManuAll.forEach(item => {
         
 
         Allpane.forEach(item => {
-            item.classList.remove('activeFP')
+            if(item != this){
+                item.classList.remove('activeFP');
+                item.classList.remove('activeCM');//
+            }
+            
         });
-
 
         const pane = document.querySelector(this.getAttribute('href'));
         pane.classList.add('activeFP')
+        
+        //
+        if(item == this){
+            item.classList.add('activeCM');
+        }else{
+            item.classList.remove('activeCM');
+
+        }
         
     });
 

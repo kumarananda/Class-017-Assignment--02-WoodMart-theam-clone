@@ -116,6 +116,12 @@ a:hover {
                     a.active {
                         background-color: #171a1d;
                     }
+                    a.activeCM {
+                        background-color: #171a1d;
+                    }
+                    a:hover {
+                        background-color: #15222e;
+                    }
 
                     a.dd-item::before {
                         content: "\f078";
