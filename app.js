@@ -16,15 +16,19 @@ tabManuAll.forEach(item => {
         Allpane.forEach(item => {
             if(item != this){
                 item.classList.remove('activeFP');
-                item.classList.remove('activeCM');//
+                
+            }   
+        });
+        tabManuAll.forEach(element => {
+            if(element != this){
+                element.classList.remove('activeCM');
             }
-            
         });
 
         const pane = document.querySelector(this.getAttribute('href'));
         pane.classList.add('activeFP')
         
-        //
+        
         if(item == this){
             item.classList.add('activeCM');
         }else{
