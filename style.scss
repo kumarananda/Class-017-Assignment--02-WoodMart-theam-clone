@@ -186,12 +186,18 @@ a:hover {
     }
 
     .contetnt-body {
-        padding-left: 15px;
+        
         width: auto;
 
         .tab-pen {
             display: none;   
-            margin-top: 20px;         
+            padding-left: 15px;
+            margin-top: 10px;
+            margin-left: 10px ;
+            margin-right: 10px ;
+             
+            width: 100%;
+            height: 80vh;     
             
             h3 {
                 text-align: center;
@@ -206,4 +212,20 @@ a:hover {
         }
     }
 
+}
+
+.bg_info {
+    background-color: rgb(201, 201, 139);
+}
+.bg_succ {
+    background-color: rgb(70, 133, 64);
+}
+.bg_dan {
+    background-color: rgb(167, 86, 86);
+}
+.bg_lite {
+    background-color: rgb(143, 104, 151);
+}
+.bg_sky {
+    background-color: rgb(70, 117, 145);
 }

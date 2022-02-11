@@ -157,13 +157,17 @@ a:hover {
 }
 
 .main-contetn .contetnt-body {
-  padding-left: 15px;
   width: auto;
 }
 
 .main-contetn .contetnt-body .tab-pen {
   display: none;
-  margin-top: 20px;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  height: 80vh;
 }
 
 .main-contetn .contetnt-body .tab-pen h3 {
@@ -177,5 +181,25 @@ a:hover {
 
 .main-contetn .contetnt-body .tab-pen.activeFP {
   display: inline-block;
+}
+
+.bg_info {
+  background-color: #c9c98b;
+}
+
+.bg_succ {
+  background-color: #468540;
+}
+
+.bg_dan {
+  background-color: #a75656;
+}
+
+.bg_lite {
+  background-color: #8f6897;
+}
+
+.bg_sky {
+  background-color: #467591;
 }
 /*# sourceMappingURL=style.css.map */
