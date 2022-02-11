@@ -105,7 +105,7 @@ a:hover {
 }
 
 .main-contetn .left-body .left-body-menu ul li a:hover {
-  background-color: #15222e;
+  background-color: #324e68;
 }
 
 .main-contetn .left-body .left-body-menu ul li a.dd-item::before {
@@ -168,6 +168,7 @@ a:hover {
 
 .main-contetn .contetnt-body .tab-pen h3 {
   text-align: center;
+  font-size: 36px;
 }
 
 .main-contetn .contetnt-body .tab-pen p {
